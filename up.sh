@@ -24,7 +24,7 @@ check_exit_status() {
 greeting() {
 
 	echo
-	echo "Hello, $USER. Let's update this system."
+	echo "Hello, $USER. Updating the system..."
 	echo
 }
 
@@ -46,9 +46,6 @@ housekeeping() {
 	check_exit_status
 
 	sudo apt-get autoclean -y;
-	check_exit_status
-
-	sudo updatedb;
 	check_exit_status
 }
 
