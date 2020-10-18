@@ -2,7 +2,7 @@
 
  1. Open a terminal on your Ubuntu 18.04 LTS system. We will be creating a Bash script, so enter the following command into the terminal to create the script file:
 
-`nano update.sh`
+*nano update.sh*
 
  2. The nano text editor will open. The first step to creating the update script is to add the ‘shebang’ at the top of the file. The ‘shebang’ is simply the path to the program that will execute the script. In this case, Bash will be used. Add the following text to the top of the script file:
 
@@ -89,37 +89,37 @@ leave
 ```
  9. Now the script can be saved and closed. To save the file enter CTRL + o, press Enter to keep the filename, and then enter CTRL + x to close the file. The script is not yet executable by the system because execute permissions have not yet been added to the script. To make the script executable, enter the following into the terminal:
 
-`chmod a+x update.sh`
+*chmod a+x update.sh*
 
  10. To verify that the update script has executable permissions, enter the following command into the terminal. The script name should appear green as in the image below.
 
-`ls -lah update.sh`
+*ls -lah update.sh*
 
  11. Now the script can be tested. To test the update script, enter the following into the terminal:
 
-`sudo ./update.sh`
+*sudo ./update.sh*
 
 12. After entering the sudo password for the system, the script should execute without error. 
 
  13. With verification that the script executes flawlessly, a bin directory will now be added to the home directory of the system. Enter the following command to create the directory:
 
-`mkdir ~/bin`
+*mkdir ~/bin*
 
  14. Now the update script can be moved into the new bin directory and renamed as a normal command. Enter the following command into the terminal to move the update script to the bin directory and rename the script to ‘up’:
 
-`mv update.sh ~/bin/up`
+*mv update.sh ~/bin/up*
 
  15. To verify the move and rename was successful, enter the following command into the terminal. You should she the ‘up’ script displayed as in the image below.
 
-`ls ~/bin`
+*ls ~/bin*
 
  16. To make the script executable from the command line like any other command, the new bin directory must be added to the search path. To add the new bin directory to the search path, enter the following command into the terminal:
 
-`export PATH=~/bin:$PATH`
+*export PATH=~/bin:$PATH*
 
  17. Finally, the .bashrc file needs to be source to enable the path changes. Enter the following command to source the .bashrc file:
 
-`source ~/.bashrc`
+*source ~/.bashrc*
 
 18. After sourcing the .bashrc file, we can now call our script by name from anywhere on our system. Simply enter ‘up’ into the command line to execute the update script! 
 
