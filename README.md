@@ -122,8 +122,3 @@ leave
 *source ~/.bashrc*
 
 18. After sourcing the .bashrc file, we can now call our script by name from anywhere on our system. Simply enter ‘up’ into the command line to execute the update script! 
-
-
-
-> This is a bash script used to update Debian and Ubuntu systems. The accompanying tutorial for this code can be found at:
-https://virtualzero.net/blog/how-to-create-a-bash-script-to-update-ubuntu-18.04-lts
